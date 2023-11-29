@@ -1,0 +1,241 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+:root {
+  /* min-height: 100vh; */
+  /* height: 100%; */
+}
+
+ 
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+ 
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+ 
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+ 
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+ 
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+ 
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+ 
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+ 
+    --radius: 0.5rem;
+  }
+ 
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+ 
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+ 
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+ 
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+ 
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+ 
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+ 
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+ 
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+ 
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* user-page {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+@media (max-width: 767px) {
+  user-page {
+    grid-template-columns: minmax(200px, 1fr);
+    margin-left: 10px;
+    margin-right: 10px;
+    gap: 10px;
+  }
+} */
+
+
+
+section .cont-container .conatat-form {
+  position: absolute;
+  padding: 70px 50px;
+  background: #fff;
+  margin-left: 150px;
+  padding-left: 250px;
+  width: calc(100%-150px);
+  box-shadow: 0 50px 50px rgb(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+@media (max-width:767px) {
+  section .cont-container .conatat-form {
+      top:0;
+      left:0;
+      position: relative;
+      margin: -20px 10px -30px ;
+      padding-left: 50px;
+      padding-bottom: 50px;
+  }
+  .conatat-form .form-box .input-text {
+      margin: 0;
+      padding: 10px;
+  }
+}
+.conatat-form h2 {
+  color: var(--main-color);
+  font-size: 24px;
+  font-weight: 500;
+}
+.conatat-form .form-box {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 30px;
+}
+.conatat-form .form-box .input-text {
+  position: relative;
+  margin: 0 0 35px 0;
+}
+.conatat-form .form-box .input-text.w50 {
+  width: 47%;
+}
+.conatat-form .form-box .input-text.w100 {
+  width: 100%;
+}
+.conatat-form .form-box .input-text input,
+.conatat-form .form-box .input-text textarea {
+  width: 100% !important;
+  resize: none;
+  padding: 5px 0;
+  font-size: 18px;
+  font-weight: 300;
+  color: #333;
+  border: none;
+  border-bottom: 1px solid #777;
+  outline: none;
+}
+.conatat-form .form-box .input-text textarea {
+  min-height: 120px;
+}
+.conatat-form .form-box .input-text span {
+  position: absolute;
+  left: 0;
+  padding: 5px 0;
+  font-size: 18px;
+  font-weight: 300;
+  color: #333;
+  transition: .5s;
+  pointer-events: none;
+}
+.conatat-form .form-box .input-text input:focus ~ span,
+.conatat-form .form-box .input-text textarea:focus ~ span, 
+.conatat-form .form-box .input-text input:valid ~ span,
+.conatat-form .form-box .input-text textarea:valid ~ span {
+  transform: translateY(-20px);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: var(--main-color);
+}
+.conatat-form .form-box .input-text input[type="submit"] {
+  position: relative;
+  cursor: pointer;
+  background: var(--main-color);
+  color: #fff;
+  border: none;
+  max-width: 150px;
+  padding: 12px;
+  transition: .5s;
+  border-radius: 8px;
+}
+.conatat-form .form-box .input-text input[type="submit"]:hover {
+  background: #22c55e;
+}
+
+/* You can add this to your existing CSS or create a new CSS file */
+/* Define a maximum width for the container */
+.max-w-screen-lg {
+  max-width: 1024px; /* Adjust this width as needed */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Ensure the table doesn't break out of the container on small screens */
+.overflow-x-auto {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap; /* Keep table content in a single line */
+}
+
+/* Optional: Add a scrollbar for better UX */
+/* Customize scrollbar appearance for different browsers */
+/* WebKit (Safari and Chrome) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #adadad;
+  border-radius: 6px;
+}
+
+/* Firefox */
+/* Style scrollbars on Firefox if needed */
+/* Please check for specific Firefox scrollbar styling as it varies */
+
+
+
+/* Add this to your CSS or stylesheet */
+.rotate {
+  transition: transform 0.3s ease; /* Animation duration and easing */
+}
+
+.rotate.checked {
+  transform: rotate(360deg); /* Rotate 360 degrees when checked */
+  scale: 1.5;
+}

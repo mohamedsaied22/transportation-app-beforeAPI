@@ -1,0 +1,52 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "app/(dashboard)/(routes)/contractors/page.jsx",
+    "app/(dashboard)/(routes)/contractors/[id]/page.jsx",
+    "app/(dashboard)/(routes)/contractors/components/contractor-delete-modal.jsx",
+    "app/(dashboard)/(routes)/dashboard/page.tsx",
+    "app/(dashboard)/(routes)/contractors/components/trucks-data.jsx",
+    "app/(dashboard)/(routes)/cargos/components/subcargo-data.jsx",
+    "app/(dashboard)/vessels/components/vessel-data.tsx",
+    "app/(dashboard)/vessels/components/voyageData.jsx",
+    "app/(dashboard)/(routes)/users/page.jsx",
+    "app/(dashboard)/(routes)/berths/component/berth-new.jsx",
+    "components/ui/sheet.tsx",
+    "build/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
